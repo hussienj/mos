@@ -29,7 +29,7 @@ interface LogbookFormPageProps {
     isPdfMode?: boolean;
 }
 
-const EditableCell: React.FC<{ value: string, onUpdate: (newValue: string), isPdfMode?: boolean, className?: string }> = ({ value, onUpdate, isPdfMode, className="" }) => {
+const EditableCell: React.FC<{ value: string, onUpdate: (newValue: string) => void, isPdfMode?: boolean, className?: string }> = ({ value, onUpdate, isPdfMode, className="" }) => {
     return (
         <td 
             className={`border-r border-black px-1 text-center font-semibold align-top ${className}`}
